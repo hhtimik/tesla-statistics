@@ -166,15 +166,41 @@ footer a{color:inherit}
       <p class="table-id">Power Query table: <code>revenue-history</code></p>
     </section>
     <section class="data-card" id="ev-range">
-      <div class="section-heading">
-        <div><p class="eyebrow">DATASET</p><h2>Tesla Vehicle Range</h2>
-        <p class="description">Mileage ranges stated in the archived article (miles).</p></div>
-        <a class="download" href="data/ev-range.csv" download>Download CSV ↓</a>
-      </div>
-      <div class="table-wrap"><table><thead><tr><th scope="col">Model</th><th scope="col">Mileage Range (miles)</th></tr></thead><tbody><tr><td>Model S</td><td>405</td></tr><tr><td>Model S Plaid</td><td>396</td></tr><tr><td>Model 3 Standard Range</td><td>272</td></tr><tr><td>Model 3 Long Range</td><td>333</td></tr><tr><td>Model 3 Performance</td><td>315</td></tr><tr><td>Model X</td><td>348</td></tr><tr><td>Model X Plaid</td><td>333</td></tr><tr><td>Model Y</td><td>330</td></tr><tr><td>Model Y Performance</td><td>303</td></tr></tbody></table></div>
-      
-      <p class="table-id">Power Query table: <code>ev-range</code></p>
-    </section>
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">DATASET</p>
+      <h2>Tesla Vehicle Range and Price</h2>
+      <p class="description">Mileage ranges (miles) and estimated average vehicle prices in euros across the US, UK and Europe.</p>
+    </div>
+    <a class="download" href="data/ev-range.csv" download>Download CSV ↓</a>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Model</th>
+          <th scope="col">Mileage Range (miles)</th>
+          <th scope="col">US Average Price (€)</th>
+          <th scope="col">UK Average Price (€)</th>
+          <th scope="col">Europe Average Price (€)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Model S</td><td>405</td><td>85000</td><td>95000</td><td>105000</td></tr>
+        <tr><td>Model S Plaid</td><td>396</td><td>100000</td><td>110000</td><td>120000</td></tr>
+        <tr><td>Model 3 Standard Range</td><td>272</td><td>35000</td><td>40000</td><td>42000</td></tr>
+        <tr><td>Model 3 Long Range</td><td>333</td><td>43000</td><td>47000</td><td>49000</td></tr>
+        <tr><td>Model 3 Performance</td><td>315</td><td>52000</td><td>56000</td><td>59000</td></tr>
+        <tr><td>Model X</td><td>348</td><td>90000</td><td>100000</td><td>110000</td></tr>
+        <tr><td>Model X Plaid</td><td>333</td><td>105000</td><td>115000</td><td>125000</td></tr>
+        <tr><td>Model Y</td><td>330</td><td>42000</td><td>45000</td><td>47000</td></tr>
+        <tr><td>Model Y Performance</td><td>303</td><td>55000</td><td>59000</td><td>62000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Note: Prices are illustrative estimates for educational purposes, not verified market averages.</p>
+  <p class="table-id">Power Query table: <code>ev-range</code></p>
+</section>
     <section class="data-card" id="service-routine">
       <div class="section-heading">
         <div><p class="eyebrow">DATASET</p><h2>Tesla Recommended Service Routine</h2>
