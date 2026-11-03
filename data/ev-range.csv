@@ -1,10 +1,10 @@
-﻿Model,Mileage Range (miles)
-Model S,405
-Model S Plaid,396
-Model 3 Standard Range,272
-Model 3 Long Range,333
-Model 3 Performance,315
-Model X,348
-Model X Plaid,333
-Model Y,330
-Model Y Performance,303
+Model,Mileage Range (miles),US Average Price (€),UK Average Price (€),Europe Average Price (€)
+Model S,405,85000,95000,105000
+Model S Plaid,396,100000,110000,120000
+Model 3 Standard Range,272,35000,40000,42000
+Model 3 Long Range,333,43000,47000,49000
+Model 3 Performance,315,52000,56000,59000
+Model X,348,90000,100000,110000
+Model X Plaid,333,105000,115000,125000
+Model Y,330,42000,45000,47000
+Model Y Performance,303,55000,59000,62000
