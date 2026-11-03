@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tesla Statistics | Data Practice</title>
+<meta name="description" content="Tesla statistics tables for Excel and Power Query practice.">
+<style>
+:root{--ink:#202124;--muted:#667085;--line:#e5e7eb;--red:#e82127;--paper:#f5f6f7;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Arial,Helvetica,sans-serif}
+header{background:#17191d;color:white;padding:44px max(24px,calc((100% - 1180px)/2)) 36px}
+.brand{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#c5c7cb;font-weight:700}
+h1{font-size:clamp(34px,5vw,58px);line-height:1.04;margin:14px 0 12px;letter-spacing:-.04em}
+header p{max-width:760px;color:#d6d7da;margin:0}
+.header-meta{margin-top:24px;font-size:13px;color:#b8bbc1}
+.layout{max-width:1180px;margin:28px auto;padding:0 20px;display:grid;grid-template-columns:245px minmax(0,1fr);gap:24px}
+aside{align-self:start;position:sticky;top:18px;background:white;border:1px solid var(--line);border-radius:12px;padding:18px;max-height:calc(100vh - 36px);overflow:auto}
+aside h2{font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin:0 0 12px}
+aside a{display:block;padding:7px 0;color:#444;text-decoration:none;font-size:13px;border-bottom:1px solid #f0f0f0}
+aside a:hover{color:var(--red)}
+main{min-width:0}.intro{background:white;border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:18px}
+.intro h2{font-size:19px;margin:0 0 8px}.intro p{margin:0;color:var(--muted)}
+.data-card{background:white;border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:18px;scroll-margin-top:18px}
+.section-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px}
+.eyebrow{font-size:10px;font-weight:bold;letter-spacing:.15em;color:var(--red);margin:0 0 5px}
+h2{font-size:21px;line-height:1.25;margin:0 0 6px}.description{color:var(--muted);font-size:14px;margin:0}
+.download{white-space:nowrap;background:#17191d;color:white;text-decoration:none;padding:9px 13px;border-radius:6px;font-size:12px;font-weight:bold}
+.download:hover{background:var(--red)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:13px;white-space:nowrap}
+th{background:#f2f3f5;text-align:left;font-weight:700;color:#333}
+th,td{padding:11px 13px;border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#fff8f8}
+.note{font-size:12px;color:var(--muted);margin:12px 0 0}
+.table-id{font-size:11px;color:#98a0aa;margin:12px 0 0}code{background:#f1f2f4;padding:2px 5px;border-radius:4px}
+footer{max-width:1180px;margin:0 auto;padding:10px 20px 40px;color:var(--muted);font-size:12px}
+footer a{color:inherit}
+@media(max-width:850px){.layout{grid-template-columns:1fr}aside{position:static;max-height:none}aside nav{columns:2}}
+@media(max-width:560px){header{padding:32px 20px}.section-heading{display:block}.download{display:inline-block;margin-top:12px}.data-card{padding:16px}aside nav{columns:1}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Data practice resource</div>
+  <h1>Tesla Statistics</h1>
+  <p>Explore Tesla sales, production, financial performance, vehicle specifications and service data. The tables are provided for Excel and Power Query practice.</p>
+  <div class="header-meta">ARCHIVED SOURCE SNAPSHOT · APRIL 2026 · EDUCATIONAL DATA RESOURCE</div>
+</header>
+<div class="layout">
+  <aside><h2>Datasets</h2><nav><a href="#country-sales-2025">Latest Comparable Country-Level Sales Data (2025)</a>
+<a href="#production-deliveries-2024">Tesla 2024 Summary (Quarterly Performance)</a>
+<a href="#us-ev-sales-brand-2023">U.S. EV Sales by Brand (2023)</a>
+<a href="#uk-sales-model-2023">Tesla UK Sales by Model (2023)</a>
+<a href="#us-sales-model-2024">Tesla U.S. Sales by Model (2024, estimated)</a>
+<a href="#us-sales-model-2023">Tesla U.S. Sales by Model (2023)</a>
+<a href="#europe-sales-country-2023">Tesla Sales by European Country (2023)</a>
+<a href="#global-production-2023">Tesla Global Production and Deliveries (2023)</a>
+<a href="#global-production-2024">Tesla Global Production and Deliveries (2024, provisional)</a>
+<a href="#revenue-history">Tesla Annual Revenue (2009–2023)</a>
+<a href="#ev-range">Tesla Vehicle Range</a>
+<a href="#service-routine">Tesla Recommended Service Routine</a></nav></aside>
+  <main>
+    <div class="intro">
+      <h2>Using this website with Excel</h2>
+      <p>In Excel, select <strong>Data → Get Data → From Web</strong> and enter this page's URL. Select the table you need in Navigator. You can also download each dataset as a CSV file. Table names are shown below each dataset.</p>
+    </div>
+    
+    <section class="data-card" id="country-sales-2025">
+      <div class="section-heading">
+        <div><p class="eyebrow">DATASET</p><h2>Latest Comparable Country-Level Sales Data (2025)</h2>
+        <p class="description">January and February 2025 registration data reproduced from the archived article.</p></div>
+        <a class="download" href="data/country-sales-2025.csv" download>Download CSV ↓</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Country</th><th scope="col">January Sales</th><th scope="col">January YoY Change</th><th scope="col">February Sales</th><th scope="col">February YoY Change</th></tr></thead><tbody><tr><td>UK</td><td>1458</td><td>-7.8%</td><td>3852</td><td>20.7%</td></tr><tr><td>Germany</td><td>1277</td><td>-59.5%</td><td>1429</td><td>-76%</td></tr><tr><td>France</td><td>1141</td><td>-63%</td><td>2395</td><td>-26%</td></tr><tr><td>United States</td><td>43411</td><td>-11%</td><td>43650</td><td>n/a*</td></tr><tr><td>China</td><td>33703</td><td>-15.5%</td><td>26777</td><td>-11.5%</td></tr></tbody></table></div>
+      <p class="note">* US monthly YoY figures are not consistently published due to the absence of official national vehicle registration data.</p>
+      <p class="table-id">Power Query table: <code>country-sales-2025</code></p>
+    </section>
+    <section class="data-card" id="production-deliveries-2024">
+      <div class="section-heading">
+        <div><p class="eyebrow">DATASET</p><h2>Tesla 2024 Summary (Quarterly Performance)</h2>
+        <p class="description">Quarterly production and delivery figures for 2024.</p></div>
+        <a class="download" href="data/production-deliveries-2024.csv" download>Download CSV ↓</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Quarter</th><th scope="col">Vehicles Produced</th><th scope="col">Vehicles Delivered</th></tr></thead><tbody><tr><td>Q1</td><td>433371</td><td>386810</td></tr><tr><td>Q2</td><td>410831</td><td>443956</td></tr><tr><td>Q3</td><td>430488</td><td>435059</td></tr><tr><td>Q4</td><td>459445</td><td>495570</td></tr><tr><td>2024 Total</td><td>1.77m</td><td>1.79m</td></tr></tbody></table></div>
+      
+      <p class="table-id">Power Query table: <code>production-deliveries-2024</code></p>
+    </section>
+    <section class="data-card" id="us-ev-sales-brand-2023">
+      <div class="section-heading">
+        <div><p class="eyebrow">DATASET</p><h2>U.S. EV Sales by Brand (2023)</h2>
+        <p class="description">Selected manufacturers and their U.S. electric vehicle sales in 2023.</p></div>
+        <a class="download" href="data/us-ev-sales-brand-2023.csv" download>Download CSV ↓</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Brand</th><th scope="col">U.S. EV Sales (2023)</th><th scope="col">EV Market Share</th></tr></thead><tbody><tr><td>Tesla</td><td>654888</td><td>55%</td></tr><tr><td>Ford–Lincoln</td><td>72608</td><td>6%</td></tr><tr><td>General Motors</td><td>75848</td><td>6.4%</td></tr><tr><td>Volkswagen Group</td><td>70398</td><td>5.9%</td></tr><tr><td>Mercedes-Benz</td><td>35272</td><td>2.9%</td></tr></tbody></table></div>
+      
+      <p class="table-id">Power Query table: <code>us-ev-sales-brand-2023</code></p>
+    </section>
+    <section class="data-card" id="uk-sales-model-2023">
+      <div class="section-heading">
+        <div><p class="eyebrow">DATASET</p><h2>Tesla UK Sales by Model (2023)</h2>
+        <p class="description">UK sales by Tesla model in 2023.</p></div>
+        <a class="download" href="data/uk-sales-model-2023.csv" download>Download CSV ↓</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Model</th><th scope="col">Units Sold</th></tr></thead><tbody><tr><td>Model Y</td><td>34495</td></tr><tr><td>Model 3</td><td>12944</td></tr><tr><td>Model X</td><td>55</td></tr><tr><td>Model S</td><td>67</td></tr><tr><td>Unknown</td><td>278</td></tr></tbody></table></div>
+      
+      <p class="table-id">Power Query table: <code>uk-sales-model-2023</code></p>
+    </section>
+    <section class="data-card" id="us-sales-model-2024">
+      <div class="section-heading">
+        <div><p class="eyebrow">DATASET</p><h2>Tesla U.S. Sales by Model (2024, estimated)</h2>
+        <p class="description">Estimated U.S. sales by model in 2024.</p></div>
+        <a class="download" href="data/us-sales-model-2024.csv" download>Download CSV ↓</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Model</th><th scope="col">Units Sold (U.S., 2024)</th></tr></thead><tbody><tr><td>Model Y</td><td>~372,613</td></tr><tr><td>Model 3</td><td>~189,903</td></tr><tr><td>Model X</td><td>~23,000</td></tr><tr><td>Model S</td><td>~16,000</td></tr><tr><td>Total</td><td>~601,500</td></tr></tbody></table></div>
+      
+      <p class="table-id">Power Query table: <code>us-sales-model-2024</code></p>
+    </section>
+    <section class="data-card" id="us-sales-model-2023">
+      <div class="section-heading">
+        <div><p class="eyebrow">DATASET</p><h2>Tesla U.S. Sales by Model (2023)</h2>
+        <p class="description">U.S. sales by model in 2023.</p></div>
+        <a class="download" href="data/us-sales-model-2023.csv" download>Download CSV ↓</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Model</th><th scope="col">Units Sold (U.S., 2023)</th></tr></thead><tbody><tr><td>Model Y</td><td>394497</td></tr><tr><td>Model 3</td><td>220910</td></tr><tr><td>Model X</td><td>23015</td></tr><tr><td>Model S</td><td>16466</td></tr><tr><td>Total</td><td>654888</td></tr></tbody></table></div>
+      
+      <p class="table-id">Power Query table: <code>us-sales-model-2023</code></p>
+    </section>
+    <section class="data-card" id="europe-sales-country-2023">
+      <div class="section-heading">
+        <div><p class="eyebrow">DATASET</p><h2>Tesla Sales by European Country (2023)</h2>
+        <p class="description">Sales by model in selected European countries in 2023.</p></div>
+        <a class="download" href="data/europe-sales-country-2023.csv" download>Download CSV ↓</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Country</th><th scope="col">Model Y</th><th scope="col">Model 3</th><th scope="col">Model X</th><th scope="col">Model S</th></tr></thead><tbody><tr><td>Norway</td><td>23058</td><td>2081</td><td>138</td><td>99</td></tr><tr><td>Germany</td><td>45818</td><td>15865</td><td>759</td><td>1240</td></tr><tr><td>France</td><td>37127</td><td>24539</td><td>462</td><td>583</td></tr><tr><td>Italy</td><td>8587</td><td>7385</td><td>260</td><td>401</td></tr><tr><td>Sweden</td><td>16576</td><td>3010</td><td>367</td><td>548</td></tr><tr><td>Belgium</td><td>8980</td><td>2471</td><td>315</td><td>299</td></tr><tr><td>Spain</td><td>6843</td><td>6123</td><td>162</td><td>132</td></tr></tbody></table></div>
+      
+      <p class="table-id">Power Query table: <code>europe-sales-country-2023</code></p>
+    </section>
+    <section class="data-card" id="global-production-2023">
+      <div class="section-heading">
+        <div><p class="eyebrow">DATASET</p><h2>Tesla Global Production and Deliveries (2023)</h2>
+        <p class="description">Global production and deliveries by vehicle group in 2023.</p></div>
+        <a class="download" href="data/global-production-2023.csv" download>Download CSV ↓</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Model</th><th scope="col">Production</th><th scope="col">Deliveries</th></tr></thead><tbody><tr><td>Model 3/Y</td><td>1775159</td><td>1739707</td></tr><tr><td>Other (S/X, Cybertruck)</td><td>70826</td><td>68874</td></tr><tr><td>Total</td><td>1845985</td><td>1808581</td></tr></tbody></table></div>
+      
+      <p class="table-id">Power Query table: <code>global-production-2023</code></p>
+    </section>
+    <section class="data-card" id="global-production-2024">
+      <div class="section-heading">
+        <div><p class="eyebrow">DATASET</p><h2>Tesla Global Production and Deliveries (2024, provisional)</h2>
+        <p class="description">Approximate global production and delivery totals by vehicle group in 2024.</p></div>
+        <a class="download" href="data/global-production-2024.csv" download>Download CSV ↓</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Model</th><th scope="col">Production (approx.)</th><th scope="col">Deliveries (approx.)</th></tr></thead><tbody><tr><td>Model 3/Y</td><td>~1.76m</td><td>~1.72m</td></tr><tr><td>Other (S/X, Cybertruck)</td><td>~95k</td><td>~60k</td></tr><tr><td>Total</td><td>~1.85m</td><td>~1.78m</td></tr></tbody></table></div>
+      
+      <p class="table-id">Power Query table: <code>global-production-2024</code></p>
+    </section>
+    <section class="data-card" id="revenue-history">
+      <div class="section-heading">
+        <div><p class="eyebrow">DATASET</p><h2>Tesla Annual Revenue (2009–2023)</h2>
+        <p class="description">Annual revenue in millions of U.S. dollars.</p></div>
+        <a class="download" href="data/revenue-history.csv" download>Download CSV ↓</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Year</th><th scope="col">Revenue (USD millions)</th></tr></thead><tbody><tr><td>2009</td><td>112</td></tr><tr><td>2010</td><td>117</td></tr><tr><td>2011</td><td>204</td></tr><tr><td>2012</td><td>413</td></tr><tr><td>2013</td><td>2014</td></tr><tr><td>2014</td><td>3198</td></tr><tr><td>2015</td><td>4046</td></tr><tr><td>2016</td><td>7000</td></tr><tr><td>2017</td><td>11759</td></tr><tr><td>2018</td><td>21461</td></tr><tr><td>2019</td><td>24578</td></tr><tr><td>2020</td><td>31536</td></tr><tr><td>2021</td><td>53823</td></tr><tr><td>2022</td><td>81462</td></tr><tr><td>2023</td><td>96773</td></tr></tbody></table></div>
+      
+      <p class="table-id">Power Query table: <code>revenue-history</code></p>
+    </section>
+    <section class="data-card" id="ev-range">
+      <div class="section-heading">
+        <div><p class="eyebrow">DATASET</p><h2>Tesla Vehicle Range</h2>
+        <p class="description">Mileage ranges stated in the archived article (miles).</p></div>
+        <a class="download" href="data/ev-range.csv" download>Download CSV ↓</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Model</th><th scope="col">Mileage Range (miles)</th></tr></thead><tbody><tr><td>Model S</td><td>405</td></tr><tr><td>Model S Plaid</td><td>396</td></tr><tr><td>Model 3 Standard Range</td><td>272</td></tr><tr><td>Model 3 Long Range</td><td>333</td></tr><tr><td>Model 3 Performance</td><td>315</td></tr><tr><td>Model X</td><td>348</td></tr><tr><td>Model X Plaid</td><td>333</td></tr><tr><td>Model Y</td><td>330</td></tr><tr><td>Model Y Performance</td><td>303</td></tr></tbody></table></div>
+      
+      <p class="table-id">Power Query table: <code>ev-range</code></p>
+    </section>
+    <section class="data-card" id="service-routine">
+      <div class="section-heading">
+        <div><p class="eyebrow">DATASET</p><h2>Tesla Recommended Service Routine</h2>
+        <p class="description">Service intervals and actions stated in the archived article.</p></div>
+        <a class="download" href="data/service-routine.csv" download>Download CSV ↓</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Service</th><th scope="col">Service Routine</th><th scope="col">Service Action</th></tr></thead><tbody><tr><td>Brake fluid health check*</td><td>Every 4 years</td><td>Replace if necessary.</td></tr><tr><td>A/C desiccant bag*</td><td>Every 4 years</td><td>Replace</td></tr><tr><td>Cabin air filter</td><td>Every 2 years</td><td>Replace</td></tr><tr><td>Brake callipers</td><td>Every year or 12,500 miles (20,000 km)</td><td>Clean and lubricate if in an area where roads are salted during winter.</td></tr><tr><td>Rotate tyres</td><td>Every 6,250 miles (10,000 km)</td><td>Rotate if tread depth difference is 2/32 in (1.5 mm) or greater, whichever comes first.</td></tr></tbody></table></div>
+      <p class="note">* Replacement of A/C desiccant bags can be extended to 6 years on vehicles manufactured between 2017–2021.</p>
+      <p class="table-id">Power Query table: <code>service-routine</code></p>
+    </section>
+  </main>
+</div>
+<footer>
+  <p><strong>Source:</strong> Honest John, “The Latest Tesla Statistics – Updated April 2026”, archived snapshot dated 21 April 2026.
+  <a href="https://web.archive.org/web/20260421223110/https://www.honestjohn.co.uk/the-latest-tesla-statistics/" target="_blank" rel="noopener">View archived source</a>.</p>
+  <p>This is an independent educational resource, not affiliated with or endorsed by Honest John or Tesla. Figures are reproduced as presented in the archived source and may include estimates or provisional values. Check the original sources before using the data for decisions.</p>
+</footer>
+</body></html>
